@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <title>测试页面</title>
+            <script>
+                // 关闭页面向iOS发送消息
+                function backMsg(){
+                    window.webkit.messageHandlers.closeMsg.postMessage({})
+                }
+                // 在需要获取token时向iOS发送消息
+                function tokenMsg(){
+                    window.webkit.messageHandlers.getTokenMsg.postMessage({})
+                }
+                // 提供方法让iOS调用，iOS将token传过来，H5获取token做后续操作
+                function getTokenFromIOS(token) {
+                    console.log(token)
+                    //
+                }
+            
+                function getUserDataWithToken(token) {
+                //1.设置token请求头
+                //2.请求后台获取用户信息
+
+                }
+                </script>
+            
+            </head>
+    <body>
+        <button type="button" id="button1" onclick="backMsg()">关闭窗口</button>
+        </br>
+        </br>
+        </br>
+        <button type="button" id="button2" onclick="tokenMsg()">获取token</button>
+    </body>
+</html>
