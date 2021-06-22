@@ -61,7 +61,7 @@ class ViewController: UIViewController,WKUIDelegate,WKNavigationDelegate,WKScrip
 //        self.web.loadFileURL(fileURL!,allowingReadAccessTo:Bundle.main.bundleURL);
         
         
-        let web_url = URL.init(string:"http://10.4.61.84:8005/#/myGift/receiveGift")
+        let web_url = URL.init(string:"http://0.0.0.0:8888/#/xxx/zzz")
         let myRequest = URLRequest(url: web_url!)
         self.web.load(myRequest)
 //        self.view.addSubview(self.web)
